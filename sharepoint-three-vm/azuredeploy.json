@@ -68,21 +68,21 @@
       "metadata": {
         "description": "The size of the AD VM Created"
       },
-      "defaultValue": "Standard_D2"
+      "defaultValue": "Standard_D3"
     },
     "sqlVMSize": {
       "type": "string",
       "metadata": {
         "description": "The size of the SQL VM Created"
       },
-      "defaultValue": "Standard_D2"
+      "defaultValue": "Standard_D3"
     },
     "spVMSize": {
       "type": "string",
       "metadata": {
         "description": "The size of the VM Created"
       },
-      "defaultValue": "Standard_D2"
+      "defaultValue": "Standard_D3"
     },
     "domainName": {
       "type": "string",
@@ -147,7 +147,8 @@
       "type": "string",
       "metadata": {
         "description": "The DNS Prefix for the SharePoint Public IP Address"
-      }
+      },
+     "defaultValue": "atoslabsp2013"
     },
     "baseUrl": {
       "type": "string",
@@ -179,13 +180,15 @@
       "type": "string",
       "metadata": {
         "description": "Name of existing public IP resource for Sharepoint"
-      }
+      },
+      "defaultValue": "atoslabsp2013publicip"
     },
     "storageAccountNamePrefix": {
       "type": "string",
       "metadata": {
         "description": "Name prefix of the new storage account created to store the VMs disks"
-      }
+      },
+      "defaultValue": "atoslabsp2013stoacc"
     },
     "storageAccountType": {
       "type": "string",
@@ -242,13 +245,13 @@
     "sqlBEAddressPoolID": "[concat(variables('sqllbID'),'/backendAddressPools/',variables('LBBE'))]",
     "spIPConfigID": "[concat(variables('spNicId'),'/ipConfigurations/ipconfig1')]",
     "adDataDisk": "ADDataDisk",
-    "adDataDiskSize": 1000,
+    "adDataDiskSize": 64,
     "sqlDataDisk": "SQLDataDisk",
-    "sqlDataDiskSize": 1000,
+    "sqlDataDiskSize": 64,
     "sqlLogDisk": "SQLLogDisk",
-    "sqlLogDiskSize": 1000,
+    "sqlLogDiskSize": 64,
     "spDataDisk": "SPDataDisk",
-    "spDataDiskSize": 1000,
+    "spDataDiskSize": 64,
     "adpublicIPAddressName": "adpublicIP",
     "sqlpublicIPAddressName": "sqlpublicIP",
     "spCentralAdminPort": 8080,
