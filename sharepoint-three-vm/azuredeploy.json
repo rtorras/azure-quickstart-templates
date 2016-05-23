@@ -147,8 +147,7 @@
       "type": "string",
       "metadata": {
         "description": "The DNS Prefix for the SharePoint Public IP Address"
-      },
-     "defaultValue": "atoslabsp2013"
+      }
     },
     "baseUrl": {
       "type": "string",
@@ -180,15 +179,13 @@
       "type": "string",
       "metadata": {
         "description": "Name of existing public IP resource for Sharepoint"
-      },
-      "defaultValue": "atoslabsp2013publicip"
+      }
     },
     "storageAccountNamePrefix": {
       "type": "string",
       "metadata": {
         "description": "Name prefix of the new storage account created to store the VMs disks"
-      },
-      "defaultValue": "atoslabsp2013stoacc"
+      }
     },
     "storageAccountType": {
       "type": "string",
